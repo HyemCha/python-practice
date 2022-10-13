@@ -21,6 +21,8 @@ def loadImage(fname):
             tmpList.append(data)
         inImage.append(tmpList)
 
+    fp.close()
+
 def displayImage(image):
     global window, canvas, paper, filename, X, Y, inImage
     rgbString = ""
@@ -124,8 +126,8 @@ if __name__ == "__main__":
 
     photoMenu = Menu(mainMenu)
     mainMenu.add_cascade(label = "사진효과", menu=photoMenu)
-    photoMenu.add_command(label = "밝게하기", command=brightPhoto())
-    photoMenu.add_command(label="어둡게하기", command=darkPhoto())
-    photoMenu.add_command(label = "반전 이미지", command=reversePhoto())
+    photoMenu.add_command(label = "밝게하기", command=brightPhoto)
+    photoMenu.add_command(label="어둡게하기", command=darkPhoto)
+    photoMenu.add_command(label = "반전 이미지", command=reversePhoto)
 
     window.mainloop()
