@@ -49,5 +49,87 @@ a = "3"
 b = "4"
 print(a+b)
 
-# 032
+# 032 문자열의 곱셈은 문자열의 반복을 의미한다.
 print("Hi" * 3)
+
+# 033
+print('-' * 80)
+
+# 034
+t1 = 'python'
+t2 = 'java'
+print((t1 + ' ' + t2 + ' ') * 3)
+
+# 035
+name1 = '김민수'
+age1 = 10
+name2 = '이철희'
+age2 = 13
+print('이름 : %s 나이 : %d' % (name1, age1))
+print('이름 : %s 나이 : %d' % (name2, age2))
+
+# 036
+print('이름 : {} 나이 : {}' .format(name1, age1))
+print('이름 : {} 나이 : {}' .format(name2, age2))
+
+# 037
+print(f"이름 : {name1} 나이 : {age1}")
+print(f"이름 : {name2} 나이 : {age2}")
+
+# 038
+상장주식주 = "5,9494,782,550"
+상장주식주 = int(상장주식주.replace(",",""))
+print(상장주식주, type(상장주식주))
+
+# 039
+분기 = "2020/03(E) (IFRS연결)"
+print(분기[:7])
+
+# 040
+data = "   삼성전자    "
+print(data.strip())
+
+# 041
+ticker = "btc_krw"
+ticker1 = (ticker.upper())
+
+# 042
+ticker2 = ticker1.lower()
+print(ticker2)
+
+# 043
+a = "hello"
+a = a.capitalize()
+print(a)
+
+# 044
+file_name = "보고서.xlsx"
+print(file_name.endswith('.xlsx'))
+
+# 045
+print(file_name.endswith(("xlsx","xls")))
+
+# 046
+file_name = "2020_" + file_name
+print(file_name.startswith("2020"))
+
+# 047
+a = "hello world"
+s = a.split()
+print(s[0])
+
+# 048
+t=ticker.split('_')
+print(t)
+
+# 049
+data = "2020_05_01"
+data = data.split('_')
+year = data[0]
+month = data[1]
+day = data[2]
+print(year, month, day)
+
+# 050 rstrip() : data가 오른쪽 공백이 제거된 반환된 새로운 문자열 객체와 바인딩 기존의 문자열은 메모리에서 자동으로 삭제됨
+data = " 039490     "
+print(data.rstrip()+'1')
